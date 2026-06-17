@@ -10,7 +10,7 @@
     body {
       height: 100%;
       margin: 0;
-      padding: 10px;
+      padding: 0;
     }
 
     img {
@@ -93,6 +93,39 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .sticky-bottom-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 110vw;
+      z-index: 9999;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sticky-bottom-banner img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      width: 110vw;
+      translate: -5vw 0.4vw;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .py-5 {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .p-5 {
+      padding: 1.25rem;
+    }
   </style>
 </head>
 
@@ -107,6 +140,10 @@
         <img src="assets/cool_text.gif" alt="Lily RL" />
 
         <p>Thanks for visiting my awesome website!!!</p>
+        <p>I'm interested in maths and computer science, specifically
+          compiler/language design, functional programming, high
+          performance/system's programming and other things, which have nothing to
+          do with computers.</p>
         <p>This page shows some of my projects.</p>
 
         <img src="assets/badass.gif" alt="Skeleton smoking a cigarette" />
@@ -137,9 +174,37 @@
     </div>
 
     <p class="disclaimer">That's the only the project that I am actually proud of.
-
       For more, check <a href="https://github.com/LilyRL">my github</a></p>
+
+    <img class="w-full py-5" src="assets/arrows.gif" alt="Divider" />
+
+    <div class="h-container p-5">
+      <img style="height: 300px;" src="assets/i_have_normal_urges.gif" alt="Happy PC" />
+      <div class="p-5">
+        <p>PLEASE <a href="mailto:joshrl@proton.me">contact me</a> if you have any
+          questions or want to talk about programming/computer science, music,
+          games, or pretty much anything else.</p>
+
+        <p>Find me around</p>
+
+        <p><a href="https://github.com/LilyRL">/LilyRL on Github</a></p>
+        <p><a href="https://www.youtube.com/@lily_lopes0">@lily_lopes0 on YouTube</a></p>
+        <p><a href="https://rateyourmusic.com/~evillily">~evillily on RYM</a></p>
+        <p><a href="https://crates.io/users/LilyRL">LilyRL on crates.io</a></p>
+        <p><a href="https://lilyrl.com">My website can be found here</a></p>
+        <p><a href="mailto:joshrl@proton.me">My primary email where i have
+            notifications turned on is joshrl@proton.me, I haven't got around
+            to changing it</a></p>
+        <p>My Bitwarden master password is
+          <code>f7aWj3HQvkfpfC</code>
+        </p>
+      </div>
+    </div>
   </main>
+
+  <div class="sticky-bottom-banner">
+    <img src="assets/fire.gif" alt="Bottom Banner Description">
+  </div>
 </body>
 
 </html>
