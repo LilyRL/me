@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Lily Robertson-Lopes</title>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 10px;
+    }
+
+    body {
+      background-image: url("assets/bg.lilys_image_file_format");
+      background-repeat: repeat;
+      background-size: 200px;
+
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    h1 {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    @keyframes flashingContainer {
+      from {
+        background-color: #FF0000;
+      }
+
+      50% {
+        background-color: black;
+      }
+    }
+
+    .flashing-container {
+      padding: 2em;
+      color: #00FF00;
+      animation: flashingContainer 2s steps(1) infinite;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .h-container {
+      display: flex;
+      /* sorry if this actually breaks the page for you i thought it would be
+         funny to use a stupid name */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/bg2.proprietary_image_format");
+      background-repeat: repeat;
+      background-size: 200px;
+      color: white;
+      font-size: 1.2em;
+      width: fit-content;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      a {
+        color: #00CCFF;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .h-container {
+        width: auto !important;
+        display: block !important;
+        padding-bottom: 20px;
+      }
+    }
+
+    .right {
+      margin-left: auto;
+    }
+
+    .disclaimer {
+      text-align: center;
+      font-size: 1.5em;
+      color: black;
+      background-color: yellow;
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="assets/welcome.gif" alt="Welcome" class="full-width" />
+
+  <div class="h-container">
+    <img src="assets/me_pretty_much.webp" alt="Person using computer" />
+    <div>
+      <img src="assets/cool_text.gif" alt="Lily RL" />
+
+      <p>Thanks for visiting my awesome website!!!</p>
+      <p>This page shows some of my projects.</p>
+
+      <img src="assets/badass.gif" alt="Skeleton smoking a cigarette" />
+    </div>
+  </div>
+
+  <br>
+
+  <div class="h-container right">
+    <img src="assets/hero.gif" alt="Doctor examining an infected computer" />
+
+    <div>
+      <img src="assets/game_engine.gif" alt="The Game Engine" />
+
+      <p>Link: <a href="https://github.com/LilyRL/sge">https://github.com/LilyRL/sge</a></p>
+
+      It's got:
+
+      <ul>
+        <li>Physics</li>
+        <li>UI</li>
+        <li>Multiplayer</li>
+        <li>Advanced, pixel perfect shape rendering</li>
+        <li>Post processing effects</li>
+        <li>Much more</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="disclaimer">That's the only the project that I am actually proud of.
+
+    For more, check <a href="https://github.com/LilyRL">my github</a></p>
+</body>
+
+</html>
