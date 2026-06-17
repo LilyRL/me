@@ -13,6 +13,10 @@
       padding: 10px;
     }
 
+    img {
+      image-rendering: pixelated;
+    }
+
     body {
       background-image: url("assets/bg.lilys_image_file_format");
       background-repeat: repeat;
@@ -83,50 +87,59 @@
       background-color: yellow;
       padding: 3px;
     }
+
+    main {
+      max-width: 1500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 
 <body>
   <img src="assets/welcome.gif" alt="Welcome" class="full-width" />
 
-  <div class="h-container">
-    <img src="assets/me_pretty_much.webp" alt="Person using computer" />
-    <div>
-      <img src="assets/cool_text.gif" alt="Lily RL" />
+  <main>
 
-      <p>Thanks for visiting my awesome website!!!</p>
-      <p>This page shows some of my projects.</p>
+    <div class="h-container">
+      <img src="assets/me_pretty_much.webp" alt="Person using computer" />
+      <div>
+        <img src="assets/cool_text.gif" alt="Lily RL" />
 
-      <img src="assets/badass.gif" alt="Skeleton smoking a cigarette" />
+        <p>Thanks for visiting my awesome website!!!</p>
+        <p>This page shows some of my projects.</p>
+
+        <img src="assets/badass.gif" alt="Skeleton smoking a cigarette" />
+      </div>
     </div>
-  </div>
 
-  <br>
+    <br>
 
-  <div class="h-container right">
-    <img src="assets/hero.gif" alt="Doctor examining an infected computer" />
+    <div class="h-container right">
+      <img src="assets/hero.gif" alt="Doctor examining an infected computer" />
 
-    <div>
-      <img src="assets/game_engine.gif" alt="The Game Engine" />
+      <div>
+        <img src="assets/game_engine.gif" alt="The Game Engine" />
 
-      <p>Link: <a href="https://github.com/LilyRL/sge">https://github.com/LilyRL/sge</a></p>
+        <p>Link: <a href="https://github.com/LilyRL/sge">https://github.com/LilyRL/sge</a></p>
 
-      It's got:
+        It's got:
 
-      <ul>
-        <li>Physics</li>
-        <li>UI</li>
-        <li>Multiplayer</li>
-        <li>Advanced, pixel perfect shape rendering</li>
-        <li>Post processing effects</li>
-        <li>Much more</li>
-      </ul>
+        <ul>
+          <li>Physics</li>
+          <li>UI</li>
+          <li>Multiplayer</li>
+          <li>Advanced, pixel perfect shape rendering</li>
+          <li>Post processing effects</li>
+          <li>Much more</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <p class="disclaimer">That's the only the project that I am actually proud of.
+    <p class="disclaimer">That's the only the project that I am actually proud of.
 
-    For more, check <a href="https://github.com/LilyRL">my github</a></p>
+      For more, check <a href="https://github.com/LilyRL">my github</a></p>
+  </main>
 </body>
 
 </html>
