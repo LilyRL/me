@@ -201,15 +201,22 @@
             90% {
                 transform: translate(4px, 4px) rotate(0deg);
             }
-
-            100% {
-                transform: translate(2px, -4px) rotate(-0.5deg);
-            }
         }
 
         body *,
         .h-container * {
             animation: sway 60s ease-in-out infinite;
+        }
+
+        .fly {
+            position: fixed;
+            left: 0;
+            top: 0;
+            will-change: transform;
+            transition: none;
+            pointer-events: none;
+            animation: none !important;
+            z-index: 10000;
         }
     </style>
 </head>
@@ -383,8 +390,92 @@
         });
     }
 
+    function fly() {
+        class Fly {
+            constructor(imageSrc) {
+                this.element = document.createElement("img");
+                this.element.src = imageSrc;
+                this.element.classList.add("fly");
+                this.element.style.width = "60px";
+                document.body.appendChild(this.element);
+
+                this.x = window.innerWidth / 2;
+                this.y = window.innerHeight / 2;
+
+                this.angle = 0;
+                this.targetAngle = 0;
+                this.turnSpeed = 0.05;
+
+                this.currentSpeed = 0;
+                this.maxSpeed = 3;
+
+                this.isMoving = false;
+
+                this.decideNextAction();
+            }
+
+            decideNextAction() {
+                this.isMoving = Math.random() > 0.5;
+
+                if (this.isMoving) {
+                    this.currentSpeed = this.maxSpeed;
+
+                    this.targetAngle = Math.random() * Math.PI * 2;
+                } else {
+                    this.currentSpeed = 0;
+                }
+
+                const nextChange = 1500 + Math.random() * 1500;
+                setTimeout(() => this.decideNextAction(), nextChange);
+            }
+
+            update() {
+                if (this.isMoving) {
+                    let angleDiff = this.targetAngle - this.angle;
+                    angleDiff = Math.atan2(Math.sin(angleDiff), Math.cos(angleDiff));
+                    this.angle += angleDiff * this.turnSpeed;
+                }
+
+                this.x += Math.cos(this.angle) * this.currentSpeed;
+                this.y += Math.sin(this.angle) * this.currentSpeed;
+
+                const spriteSize = 60;
+
+                if (this.x < -spriteSize) {
+                    this.x = window.innerWidth;
+                } else if (this.x > window.innerWidth) {
+                    this.x = -spriteSize;
+                }
+
+                if (this.y < -spriteSize) {
+                    this.y = window.innerHeight;
+                } else if (this.y > window.innerHeight) {
+                    this.y = -spriteSize;
+                }
+            }
+
+            render() {
+                const degrees = this.angle * (180 / Math.PI) + 90;
+                this.element.style.transform = `translate(${this.x}px, ${this.y}px) rotate(${degrees}deg)`;
+            }
+        }
+
+        const pet = new Fly("assets/fly.webp");
+
+        function loop() {
+            pet.update();
+            pet.render();
+            requestAnimationFrame(loop);
+        }
+
+        loop();
+    }
+
     randomBackgrounds();
+    setInterval(randomBackgrounds, 30000);
+
     animationOffsets();
+    fly();
 </script>
 
 </html>
