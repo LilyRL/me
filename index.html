@@ -135,6 +135,37 @@
         .spacer {
             height: var(--fire-height);
         }
+
+        .white {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+
+        .face-container {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/marble_face.png");
+            padding-top: 30px;
+            image-rendering: pixelated;
+        }
+
+        .happiness-divider {
+            --height: 100px;
+
+            background-image: url("assets/im_happy.png");
+            height: var(--height);
+            background-size: var(--height);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 
@@ -157,7 +188,7 @@
 
                 <div class="tags">
                     <img src="assets/badass.gif" alt="Skeleton smoking a cigarette" />
-                    <img src="assets/dg.jpg" alt="DEATH GRIPS" />
+                    <a href="https://thirdworlds.net/"><img src="assets/dg.jpg" alt="DEATH GRIPS" /></a>
                     <img src="assets/pikmin.gif" alt="I love red pikmin" />
                     <img src="assets/tetris.gif" alt="I love tetris" />
                     <img src="assets/yeah_okay_you_got_me_im_gay_in_real_life.gif" alt="This site is GAY" />
@@ -175,9 +206,14 @@
 
                 <p>Link: <a href="https://github.com/LilyRL/sge">https://github.com/LilyRL/sge</a></p>
 
+                <p>Written in Rust and designed to be as simple and easy to use as possible, without requiring
+                    significant knowlage of the Rust langauge. Lots of documentation in the form of a book explaining
+                    the features and systems, and 74 (at time of writing) examples if you prefer.</p>
+
                 It's got:
 
                 <ul>
+                    <li>2D and 3D</li>
                     <li>Physics</li>
                     <li>UI</li>
                     <li>Multiplayer</li>
@@ -193,7 +229,7 @@
 
         <img class="w-full py-5" src="assets/arrows.gif" alt="Divider" />
 
-        <div class="h-container p-5">
+        <div class="h-container">
             <img style="height: 300px;" src="assets/i_have_normal_urges.gif" alt="Happy PC" />
             <div class="p-5">
                 <p>PLEASE <a href="mailto:joshrl@proton.me">contact me</a> if you have any
@@ -215,7 +251,35 @@
                 </p>
             </div>
         </div>
+
+        <div class="happiness-divider"></div>
+
+        <div class="face-container">
+            <p class="white center">Sharks for anya</p>
+            <div class="mx-auto">
+                <img src="assets/shark.gif" alt="swimming shark" />
+                <img src="assets/shark.gif" alt="swimming shark" />
+                <img src="assets/shark.gif" alt="swimming shark" />
+                <img src="assets/shark.gif" alt="swimming shark" />
+                <img src="assets/shark.gif" alt="swimming shark" />
+                <img src="assets/shark.gif" alt="swimming shark" />
+            </div>
+
+            <p class="white center">Bugs for lucas</p>
+            <div class="mx-auto">
+                <img src="assets/bug.gif" alt="dancing bug" />
+                <img src="assets/bug.gif" alt="dancing bug" />
+                <img src="assets/bug.gif" alt="dancing bug" />
+                <img src="assets/bug.gif" alt="dancing bug" />
+                <img src="assets/bug.gif" alt="dancing bug" />
+                <img src="assets/bug.gif" alt="dancing bug" />
+            </div>
+        </div>
     </main>
+
+    <a href="https://store.steampowered.com/app/1388770/Cruelty_Squad/">
+        <img src="assets/painting.png" alt="Two people staring into eachothers eyes." />
+    </a>
 
     <div class="sticky-bottom-banner">
     </div>
