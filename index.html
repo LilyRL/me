@@ -17,12 +17,11 @@
             padding: 0;
         }
 
-        img {
+        * {
             image-rendering: pixelated;
         }
 
         body {
-            background-image: url("assets/bg.lilys_image_file_format");
             background-repeat: repeat;
             background-size: 200px;
 
@@ -44,12 +43,6 @@
             }
         }
 
-        .flashing-container {
-            padding: 2em;
-            color: #00FF00;
-            animation: flashingContainer 2s steps(1) infinite;
-        }
-
         .full-width {
             width: 100%;
         }
@@ -58,7 +51,6 @@
             display: flex;
             /* sorry if this actually breaks the page for you i thought it would be
          funny to use a stupid name */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/bg2.proprietary_image_format");
             background-repeat: repeat;
             background-size: 200px;
             color: white;
@@ -91,7 +83,7 @@
             padding: 3px;
         }
 
-        main {
+        .center-container {
             max-width: 1500px;
             margin-left: auto;
             margin-right: auto;
@@ -111,8 +103,6 @@
             background-repeat: repeat-x;
             background-position: bottom center;
             background-size: auto var(--fire-height);
-
-            image-rendering: pixelated;
         }
 
         .w-full {
@@ -155,10 +145,10 @@
             display: inline-block;
         }
 
-        .face-container {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/marble_face.png");
+        #face-container {
             padding-top: 30px;
-            image-rendering: pixelated;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
         }
 
         .happiness-divider {
@@ -170,14 +160,60 @@
             margin-top: 30px;
             margin-bottom: 30px;
         }
+
+        @keyframes sway {
+            0% {
+                transform: translate(10px, 10px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-10px, -20px) rotate(-0.5deg);
+            }
+
+            20% {
+                transform: translate(-15px, 0px) rotate(0.5deg);
+            }
+
+            30% {
+                transform: translate(0px, 20px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(10px, -10px) rotate(0.5deg);
+            }
+
+            50% {
+                transform: translate(-10px, 20px) rotate(-0.5deg);
+            }
+
+            60% {
+                transform: translate(-15px, 10px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(20px, 10px) rotate(-0.5deg);
+            }
+
+            80% {
+                transform: translate(-10px, -10px) rotate(0.5deg);
+            }
+
+            90% {
+                transform: translate(20px, 20px) rotate(0deg);
+            }
+        }
+
+        body *,
+        .h-container * {
+            animation: sway 60s ease-in-out infinite;
+        }
     </style>
 </head>
 
 <body>
     <img src="assets/welcome.gif" alt="Welcome" class="full-width" />
 
-    <main>
-
+    <div class="center-container">
         <div class="h-container">
             <img src="assets/me_pretty_much.webp" alt="Person using computer" />
             <div>
@@ -228,9 +264,12 @@
             </div>
         </div>
 
-        <p class="disclaimer">That's the only the project that I am actually proud of.
-            For more, check <a href="https://github.com/LilyRL">my github</a></p>
+    </div>
 
+    <p class="disclaimer">That's the only the project that I am actually proud of.
+        For more, check <a href="https://github.com/LilyRL">my github</a></p>
+
+    <div class="center-container">
         <img class="w-full py-5" src="assets/arrows.gif" alt="Divider" />
 
         <div class="h-container">
@@ -255,48 +294,48 @@
                 </p>
             </div>
         </div>
+    </div>
 
-        <div class="happiness-divider"></div>
+    <div class="happiness-divider"></div>
 
-        <div class="face-container">
-            <p class="white center">Sharks for anya</p>
-            <div class="mx-auto">
-                <img src="assets/shark.gif" alt="swimming shark" />
-                <img src="assets/shark.gif" alt="swimming shark" />
-                <img src="assets/shark.gif" alt="swimming shark" />
-                <img src="assets/shark.gif" alt="swimming shark" />
-                <img src="assets/shark.gif" alt="swimming shark" />
-                <img src="assets/shark.gif" alt="swimming shark" />
-            </div>
-
-            <p class="white center">Bugs for lucas</p>
-            <div class="mx-auto">
-                <img src="assets/bug.gif" alt="dancing bug" />
-                <img src="assets/bug.gif" alt="dancing bug" />
-                <img src="assets/bug.gif" alt="dancing bug" />
-                <img src="assets/bug.gif" alt="dancing bug" />
-                <img src="assets/bug.gif" alt="dancing bug" />
-                <img src="assets/bug.gif" alt="dancing bug" />
-            </div>
-
-            <p class="center"><a href="https://quiz.lilyrl.com" class="white">Edward &lt;3</a></p>
-            <div class="mx-auto">
-                <img src="assets/green.png" alt="green square with the word brat" /><img src="assets/green2.png"
-                    alt="green square with the word brat" /><img src="assets/green3.png"
-                    alt="green square with the word brat" /><img src="assets/green4.png"
-                    alt="green square with the word brat" /><img src="assets/green5.png"
-                    alt="green square with the word brat" /><img src="assets/green6.png"
-                    alt="green square with the word brat" />
-            </div>
-
-            <p class="white center">Riley</p>
-            <div class="mx-auto">
-                <img src="assets/pig.gif" alt="surfing pig" />
-                <img src="assets/car.gif" alt="car" />
-                <img src="assets/money.gif" alt="money" />
-            </div>
+    <div id="face-container">
+        <p class="white center">Sharks for anya</p>
+        <div class="mx-auto">
+            <img src="assets/shark.gif" alt="swimming shark" />
+            <img src="assets/shark.gif" alt="swimming shark" />
+            <img src="assets/shark.gif" alt="swimming shark" />
+            <img src="assets/shark.gif" alt="swimming shark" />
+            <img src="assets/shark.gif" alt="swimming shark" />
+            <img src="assets/shark.gif" alt="swimming shark" />
         </div>
-    </main>
+
+        <p class="white center">Bugs for lucas</p>
+        <div class="mx-auto">
+            <img src="assets/bug.gif" alt="dancing bug" />
+            <img src="assets/bug.gif" alt="dancing bug" />
+            <img src="assets/bug.gif" alt="dancing bug" />
+            <img src="assets/bug.gif" alt="dancing bug" />
+            <img src="assets/bug.gif" alt="dancing bug" />
+            <img src="assets/bug.gif" alt="dancing bug" />
+        </div>
+
+        <p class="center"><a href="https://quiz.lilyrl.com" class="white">Edward &lt;3</a></p>
+        <div class="mx-auto">
+            <img src="assets/green.png" alt="green square with the word brat" /><img src="assets/green2.png"
+                alt="green square with the word brat" /><img src="assets/green3.png"
+                alt="green square with the word brat" /><img src="assets/green4.png"
+                alt="green square with the word brat" /><img src="assets/green5.png"
+                alt="green square with the word brat" /><img src="assets/green6.png"
+                alt="green square with the word brat" />
+        </div>
+
+        <p class="white center">Riley</p>
+        <div class="mx-auto">
+            <img src="assets/pig.gif" alt="surfing pig" />
+            <img src="assets/car.gif" alt="car" />
+            <img src="assets/money.gif" alt="money" />
+        </div>
+    </div>
 
     <a href="https://store.steampowered.com/app/1388770/Cruelty_Squad/">
         <img src="assets/painting.png" alt="Two people staring into eachothers eyes." />
@@ -308,5 +347,40 @@
     <div class="spacer">
     </div>
 </body>
+
+
+<script>
+    function randomBackgrounds() {
+        const numbers = [];
+        while (numbers.length < 3) {
+            const randomNumber = Math.floor(Math.random() * 6) + 1;
+            if (!numbers.includes(randomNumber)) {
+                numbers.push(randomNumber);
+            }
+        }
+
+        const body = document.querySelector('body');
+        body.style.backgroundImage = `url("assets/bg${numbers[0]}")`;
+        const hContainers = document.querySelectorAll('.h-container');
+        for (const hContainer of hContainers) {
+            hContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/bg${numbers[1]}")`;
+        }
+        const faceContainer = document.querySelector('#face-container');
+        faceContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("assets/bg${numbers[2]}")`;
+    }
+
+    function animationOffsets() {
+        const allElements = document.querySelectorAll('body *');
+
+        allElements.forEach(element => {
+            const randomOffset = -(Math.random() * 60);
+
+            element.style.animationDelay = `${randomOffset}s`;
+        });
+    }
+
+    randomBackgrounds();
+    animationOffsets();
+</script>
 
 </html>
