@@ -218,6 +218,17 @@
             animation: none !important;
             z-index: 10000;
         }
+
+        .faller {
+            position: fixed;
+            left: 0;
+            top: 0;
+            will-change: transform;
+            transition: none;
+            pointer-events: none;
+            z-index: 10000;
+            animation: none !important;
+        }
     </style>
 </head>
 
@@ -399,10 +410,10 @@
                 this.element.style.width = "60px";
                 document.body.appendChild(this.element);
 
-                this.x = window.innerWidth / 2;
-                this.y = window.innerHeight / 2;
+                this.x = Math.random() * window.innerWidth;
+                this.y = Math.random() * window.innerHeight;
 
-                this.angle = 0;
+                this.angle = Math.random() * 6.3;
                 this.targetAngle = 0;
                 this.turnSpeed = 0.05;
 
@@ -471,11 +482,58 @@
         loop();
     }
 
+    function fallers() {
+        function gen_faller() {
+            let node = document.createElement("img");
+            let animationDelay = Math.random() * 3.0;
+            let image = images[Math.floor(Math.random() * 2)]
+            node.src = `assets/${image}`;
+            node.classList.add("faller");
+            node.style.width = "30px";
+            node.style.animationDelay = `-${animationDelay}s`;
+            document.body.appendChild(node);
+
+            return {
+                position: { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight },
+                rotation: Math.random() * 360,
+                node: node,
+            };
+        }
+
+
+        const images = ["snowflake.png", "pizza.png"]
+        const numFallers = Math.round(window.innerWidth * window.innerHeight / 100000);
+        const fallers = Array(numFallers).fill(0).map((s) => gen_faller());
+
+        function update() {
+            for (faller of fallers) {
+                faller.rotation += 3;
+                faller.position.y += 1;
+
+                if (faller.position.y > window.innerHeight + 60) {
+                    faller.position.y = -60;
+                    faller.position.x = Math.random() * window.innerWidth;
+                }
+
+                faller.node.style.transform = `translate(${faller.position.x}px, ${faller.position.y}px) rotate(${faller.rotation}deg)`;
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        update();
+
+        console.log(fallers)
+    }
+
     randomBackgrounds();
     setInterval(randomBackgrounds, 30000);
 
     animationOffsets();
-    fly();
+    fallers();
+    for (i = 0; i < 4; i++) {
+        fly();
+    }
 </script>
 
 </html>
