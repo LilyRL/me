@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+:root {
+	--fire-height: 120px;
+}
+
+* {
+	image-rendering: pixelated;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+	color: #00ccff;
+	text-decoration: underline;
+	text-underline-offset: 0.25rem;
+}
+
+.pixel {
+	image-rendering: pixelated;
+}
