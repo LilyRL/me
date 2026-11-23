@@ -1,14 +1,18 @@
 <div class="min-h-[100vh] min-w-[100vw] bg-black">
-    <div class="max-w-[1500px] p-20 mx-auto text-neutral-400">
+    <div class="max-w-[1500px] md:p-20 p-5 mx-auto text-neutral-400">
         <h1 class="text-neutral-300 font-bold">services</h1>
         <p><a href="https://msg.lilyrl.com">msg</a> &ndash; irc like web chat</p>
         <p><a href="https://yt.lilyrl.com">tubehaus</a> &ndash; invidious like youtube client</p>
         <p>
-          <a href="https://hub.lilyrl.com">sourcehut server</a> if you want to host your code here,
-          <a href="mailto:lily.r.lopes@gmail.com">email me</a>
+          <a href="https://hub.lilyrl.com">sourcehut server</a> &ndash; just my projects</p>
+        <p></p>
+        <p><a href="https://chat.lilyrl.com">element web</a> and <a href="https://matrix.lilyrl.com">matrix server</a> to be used together</p>
+
+        <br>
+        <p>
+          if you'd like to host your code on this server (for some reason), or
+          one of these is down,  <a href="mailto:lily.r.lopes@gmail.com">email me</a>
         </p>
-        <p><a href="https://matrix.lilyrl.com">matrix server</a></p>
-        <p><a href="https://chat.lilyrl.com">element web</a> to be used with my matrix server</p>
     </div>
 </div>
 
