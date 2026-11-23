@@ -36,12 +36,13 @@
 <div class="page" style="--page-bg: url({pageBackground})">
   <img class="w-full" src={welcome} alt="Welcome" />
 
-  <button class="px-3 py-1 bg-white w-fit" onclick={toggleLights}>
-    Turn off the lights
-  </button>
 
   <div class="center-container">
     <div class="panels">
+    <button class="px-3 py-1 bg-white w-fit" onclick={toggleLights}>
+        Turn off the lights
+    </button>
+
       <Hero />
 
       <CCompilerProject />

@@ -26,7 +26,7 @@
     other things, which have nothing to do with computers.
   </p>
 
-  <p>This page shows some of my projects.</p>
+  <p>This page shows some of my projects. <a href="/services">Services hosted on this site</a></p>
 
   <div class="tags">
     <img src={badass} alt="Skeleton smoking a cigarette" />

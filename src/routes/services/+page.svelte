@@ -13,6 +13,10 @@
           if you'd like to host your code on this server (for some reason), or
           one of these is down,  <a href="mailto:lily.r.lopes@gmail.com">email me</a>
         </p>
+
+        <br>
+
+        <a href="/" class="!text-neutral-400 hover:!text-neutral-100">&lt;- home</a>
     </div>
 </div>
 
