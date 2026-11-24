@@ -12,7 +12,7 @@
 
 	<div class="p-5">
 		<p>
-			PLEASE <a href="mailto:joshrl@proton.me">contact me</a> if you have any
+			PLEASE <a href="mailto:lily.r.lopes@gmail.com">contact me</a> if you have any
 			questions or want to talk about programming/computer science, music, games,
 			or pretty much anything else.
 		</p>
@@ -25,9 +25,8 @@
 		<p><a href="https://crates.io/users/LilyRL">LilyRL on crates.io</a></p>
 		<p><a href="https://lilyrl.com">My website can be found here</a></p>
 		<p>
-			<a href="mailto:joshrl@proton.me"
-				>My primary email where i have notifications turned on is
-				joshrl@proton.me, I haven't got around to changing it</a
+			<a href="mailto:lily.r.lopes@gmail.com"
+				>My primary email where i have notifications turned on is lily.r.lopes@gmail.com</a
 			>
 		</p>
 		<p>
